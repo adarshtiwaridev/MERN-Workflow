@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .catalog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h2 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="catalog-container">
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1593642634361-d2b55e6b2c62" alt="Laptop">
+            <h2>Laptop</h2>
+            <p class="description">High-performance laptop suitable for gaming and professional work.</p>
+            <p class="price">₹50,000</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1593642634361-d2b55e6b2c62" alt="Headphones">
+            <h2>Headphones</h2>
+            <p class="description">Noise-cancelling over-ear headphones with deep bass.</p>
+            <p class="price">₹3,500</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1593642634361-d2b55e6b2c62" alt="Smartphone">
+            <h2>Smartphone</h2>
+            <p class="description">Latest model with advanced features and sleek design.</p>
+            <p class="price">₹25,000</p>
+        </div>
+    </div>
+</body>
+</html>
