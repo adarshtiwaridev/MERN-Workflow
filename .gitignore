@@ -2,3 +2,6 @@ node_modules/
 *.log
 dist/
 *.lock
+echo node_modules/ > .gitignore
+echo *.lock >> .gitignore
+echo */.git >> .gitignore
