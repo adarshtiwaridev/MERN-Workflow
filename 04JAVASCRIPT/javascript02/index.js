@@ -113,3 +113,4 @@ console.log(disten);
 // spread methode
 let rekha = {...src };
 console.log(rekha);
+Completed Done

@@ -164,3 +164,4 @@ let item = arr2.map(function(num) {
     return { value: num };
 });
 console.log(item);
+Completed Done

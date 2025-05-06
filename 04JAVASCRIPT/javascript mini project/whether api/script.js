@@ -296,3 +296,5 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 // Handle location access button
 document.getElementById('grantAccessBtn').addEventListener('click', fetchWeatherByLocation);
 
+
+Completed Done

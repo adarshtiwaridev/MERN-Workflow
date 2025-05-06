@@ -197,3 +197,5 @@ resetBtn.addEventListener("click", () => {
   checkCount = 0;
   funcArr = [];
 });
+
+Completed Done

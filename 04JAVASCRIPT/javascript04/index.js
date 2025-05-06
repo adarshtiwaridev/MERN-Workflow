@@ -103,3 +103,4 @@ let person = {
 // methode 2
 let totalsum=a.reduce((accumulator,currentvalue)=>accumulator+currentvalue,0);
 console.log(totalsum);
+Completed Done
