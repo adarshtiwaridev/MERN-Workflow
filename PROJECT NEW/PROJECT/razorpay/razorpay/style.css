@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.svgbox:hover {
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.link:hover {
+    background-color: black;
+}
+Completed Done
+
+Completed Done
+
+Completed Done
