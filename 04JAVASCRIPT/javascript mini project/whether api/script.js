@@ -298,3 +298,11 @@ document.getElementById('grantAccessBtn').addEventListener('click', fetchWeather
 
 
 Completed Done
+
+Completed Done
+
+Completed Done
+
+Completed Done
+
+Completed Done

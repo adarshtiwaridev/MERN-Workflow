@@ -104,3 +104,11 @@ let person = {
 let totalsum=a.reduce((accumulator,currentvalue)=>accumulator+currentvalue,0);
 console.log(totalsum);
 Completed Done
+
+Completed Done
+
+Completed Done
+
+Completed Done
+
+Completed Done

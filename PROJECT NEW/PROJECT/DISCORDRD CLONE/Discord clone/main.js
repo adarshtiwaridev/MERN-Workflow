@@ -22,3 +22,11 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+Completed Done
+
+Completed Done
+
+Completed Done
+
+Completed Done

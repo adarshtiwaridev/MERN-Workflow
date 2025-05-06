@@ -165,3 +165,11 @@ let item = arr2.map(function(num) {
 });
 console.log(item);
 Completed Done
+
+Completed Done
+
+Completed Done
+
+Completed Done
+
+Completed Done
