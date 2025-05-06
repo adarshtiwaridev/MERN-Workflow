@@ -1,0 +1,2 @@
+git submodule add https://github.com/username/imagegallery.git "PROJECT NEW/PROJECT/IMAGEGALLARY/imagegallery"
+git submodule add https://github.com/username/discord-clone.git "PROJECT NEW/PROJECT/DISCORDRD CLONE/discord-clone"
