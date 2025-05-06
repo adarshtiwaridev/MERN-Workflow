@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Rhythm Dance Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #74b9ff;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            background-color: white;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
+        }
+        input, select {
+            display: block;
+            margin: 15px auto;
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #b2bec3;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 30px;
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Register for a Class</h1>
+    <form action="#">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <select required>
+            <option value="">Select Dance Style</option>
+            <option value="hiphop">Hip Hop</option>
+            <option value="ballet">Ballet</option>
+            <option value="salsa">Salsa</option>
+        </select>
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>
