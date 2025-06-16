@@ -101,7 +101,7 @@
     border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 0.5rem 2rem;
     cursor: pointer;
-    /* display: none; */
+    display: none;
 }
 .btn.active {
     display: flex;
@@ -109,7 +109,7 @@
 
 /* Winner Highlight */
 .win {
-    background-color: rgba(0, 255, 0, 0.5);
+   background-color: #90ee90; /* Light green highlight */
 }
 
 /* -------------------- */
