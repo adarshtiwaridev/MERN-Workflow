@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Box = ({ id, name, info, image, price, removeBox }) => {
   const [readMore, setReadMore] = useState(false);
- const description = readMore ?info : `${info.substring(0,200)}....`
+ const description = readMore ?info : `${info.substring(0,350)}....`
   return (
   <div className="flex flex-col md:flex-row bg-white shadow-lg rounded-2xl p-4 m-4 border border-gray-200 transition-all duration-300 hover:shadow-2xl">
   {/* Image */}
