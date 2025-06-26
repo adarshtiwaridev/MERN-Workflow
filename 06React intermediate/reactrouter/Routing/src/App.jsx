@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Support from './components/Support';
 import Abouts from './components/Abouts';
 import Pagenotfound from './components/Pagenotfound';
+import Mainhead from './Components/Mainhead1';
 
 const App = () => {
   return (
@@ -60,10 +61,11 @@ const App = () => {
 
       {/* ✅ Routes Setup */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Mainhead />} />
+        <Route index element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/Support" element={<Support />} />
-        <Route path="/Abouts" element={<Abouts />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/abouts" element={<Abouts />} />
         <Route path="*" element={<Pagenotfound />} />
       </Routes>
     </div>
