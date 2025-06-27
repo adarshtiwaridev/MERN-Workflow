@@ -1,5 +1,9 @@
 import React from 'react';
-
+import { toast } from 'react-toastify';
+ function startHandle(e) {
+e.preventDefault();
+toast.success("Just login To start ")
+ }
 const Home = () => {
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
@@ -9,7 +13,7 @@ const Home = () => {
         <p className="text-lg text-gray-700">
           This is a dummy Home page created just for testing purpose. Feel free to modify it as you want.
         </p>
-        <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+        <button onClick={startHandle} className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
           Get Started
         </button>
       </section>

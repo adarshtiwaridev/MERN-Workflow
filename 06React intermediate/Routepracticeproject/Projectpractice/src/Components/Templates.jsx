@@ -42,7 +42,7 @@ const Templates = ({ title, des1, desc2, image, formtype, setLoggedIn }) => {
         </div>
 
         {/* Google Button */}
-        <button className="flex items-center justify-center w-full bg-white border border-gray-300 rounded-lg py-2 text-sm font-medium text-gray-700 hover:shadow-lg hover:scale-105 transition duration-300">
+        <button className="flex items-center justify-center w-full bg-blue-300 border border-gray-300 rounded-lg py-2 text-sm font-medium text-gray-700 hover:shadow-lg hover:scale-105 transition duration-300">
           <img
             src="https://www.svgrepo.com/show/475656/google-color.svg"
             alt="Google Logo"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Signupform = ({ setLoggedIn }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -27,9 +28,18 @@ const Signupform = ({ setLoggedIn }) => {
   }
 
   function submitHandler(e) {
+
     e.preventDefault();
+    toast.success("Your Account is Created")
     console.log("Signup Data:", signupData);
     console.log("Selected Role:", selectedRole);
+setSignupData({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+    confirmpassword: "",
+  });
     // Add API call or Toast here
   }
 

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Loginform = () => {
   const [showPassword, setShowPassword] = useState(false);
-
+const navigate=useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -16,9 +17,16 @@ const Loginform = () => {
       [event.target.name]: event.target.value,
     }));
   }
+  function loginhandle(e) {
+      e.preventDefault();
+     toast.success("Logged succesfull");
+     setLoggedIn(true)
+     navigate("/Dashbord")
+
+  }
 
   return (
-    <form
+    <form onSubmit={loginhandle}
       action=""
       className="max-w-md mx-auto mt-10 p-8 bg-white shadow-lg rounded-2xl space-y-6"
     >
