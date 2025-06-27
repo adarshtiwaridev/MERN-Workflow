@@ -2,7 +2,7 @@ import React from "react";
 import Templates from "../Components/Templates";
 import logginimage from "../assets/login.png";
 
-const Login = ({ setIsLoggedIn }) => {
+const Login = ({ setLoggedin }) => {
   return (
     <Templates
       title="Welcome Back"
@@ -10,7 +10,8 @@ const Login = ({ setIsLoggedIn }) => {
       desc2="Education is the future"
       image={logginimage}
       formtype="login"
-      setLoggedIn={setIsLoggedIn}
+
+      setLoggedin={setLoggedin}
     />
   );
 };

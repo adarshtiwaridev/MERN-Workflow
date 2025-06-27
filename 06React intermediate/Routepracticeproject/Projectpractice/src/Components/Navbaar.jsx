@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/Logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import ServicesPage from "./ServicesPage";
 
 const Navbaar = ({ islogin, setLoggedin }) => {
   const navigate = useNavigate();
@@ -40,9 +41,10 @@ const Navbaar = ({ islogin, setLoggedin }) => {
       {/* ✅ Center - Links */}
       <div className="flex gap-6">
         <Link to="/" className="hover:text-yellow-300 font-medium">Home</Link>
-        <Link to="/about" className="hover:text-yellow-300 font-medium">About</Link>
-        <Link to="/services" className="hover:text-yellow-300 font-medium">Services</Link>
-        <Link to="/contact" className="hover:text-yellow-300 font-medium">Contact</Link>
+        <Link to="/About" className="hover:text-yellow-300 font-medium">About</Link>
+        <Link to="/ServicesPage" className="hover:text-yellow-300 font-medium">Services</Link>
+          <Link to="/PricingPage" className="hover:text-yellow-300 font-medium">Pricing</Link>
+        <Link to="/ContactForm" className="hover:text-yellow-300 font-medium">Contact</Link>
       </div>
 
       {/* ✅ Right - Auth Buttons */}

@@ -33,6 +33,12 @@ const Signupform = ({ setLoggedIn }) => {
     toast.success("Your Account is Created")
     console.log("Signup Data:", signupData);
     console.log("Selected Role:", selectedRole);
+     const userData = {
+    ...signupData,
+    role: selectedRole,
+  };
+
+  localStorage.setItem("userSignupData", JSON.stringify(userData));
 setSignupData({
     firstname: "",
     lastname: "",

@@ -3,7 +3,7 @@ import Signupform from "../pages/Signupform";
 import Loginform from "../pages/Loginform";
 import frame from "../assets/frame.png";
 
-const Templates = ({ title, des1, desc2, image, formtype, setLoggedIn }) => {
+const Templates = ({ title, des1, desc2, image, formtype,setLoggedin }) => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-gradient-to-r from-blue-50 via-white to-blue-50 px-4 py-8">
 
@@ -28,9 +28,9 @@ const Templates = ({ title, des1, desc2, image, formtype, setLoggedIn }) => {
         {/* Form */}
         <div className="w-full">
           {formtype === "SignUp" ? (
-            <Signupform setLoggedIn={setLoggedIn} />
+            <Signupform  />
           ) : (
-            <Loginform setLoggedIn={setLoggedIn} />
+            <Loginform  setLoggedin={setLoggedin} />
           )}
         </div>
 

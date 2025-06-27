@@ -3,13 +3,15 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-const Loginform = () => {
+const Loginform = ({setLoggedin}) => {
   const [showPassword, setShowPassword] = useState(false);
 const navigate=useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+const registerData = JSON.parse(localStorage.getItem("userSignupData"));
+console.log(registerData)
 
   function changeHandler(event) {
     setFormData((prevData) => ({
@@ -17,11 +19,20 @@ const navigate=useNavigate();
       [event.target.name]: event.target.value,
     }));
   }
+
   function loginhandle(e) {
       e.preventDefault();
-     toast.success("Logged succesfull");
-     setLoggedIn(true)
-     navigate("/Dashbord")
+
+
+      if (formData.email===registerData.email && formData.password===registerData.password) {
+  navigate("/Dashboard")
+    toast.success("Logged succesfull");
+     setLoggedin(true);
+
+      } else {
+  toast.error("Wrong email and password")
+      }
+
 
   }
 
