@@ -8,8 +8,7 @@ export const cartSlice = createSlice({
   reducers: {
     add: (state, action) => {
       // Prevent duplicate items if already in cart
-      const itemExists = state.find(item => item.id === action.payload.id);
-      if (!itemExists) {
+   {
         state.push(action.payload);
       }
     },
