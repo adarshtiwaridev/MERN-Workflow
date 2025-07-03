@@ -1,14 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = [];
 
 export const cartSlice = createSlice({
-  name: 'cart',
-  initialState: [],
+  name: "cart",
+  initialState,
   reducers: {
     add: (state, action) => {
-      // Add logic here
+      // Prevent duplicate items if already in cart
+      const itemExists = state.find(item => item.id === action.payload.id);
+      if (!itemExists) {
+        state.push(action.payload);
+      }
     },
     remove: (state, action) => {
-      // Remove logic here
+      // Always use === for strict comparison
+      return state.filter((item) => item.id !== action.payload);
     },
   },
 });

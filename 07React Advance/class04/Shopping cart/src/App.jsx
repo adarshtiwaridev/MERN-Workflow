@@ -2,7 +2,7 @@ import React from 'react'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'
 import Home from "./Pages/Home"
-import cart from "./Pages/cart"
+import Cart from "./Pages/Cart"
 import Navbaar from './Components/Navbaar';
 import { Route ,Routes   } from 'react-router-dom';
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
 
    <Routes>
  <Route path="/" element={<Home/>}/>
-  <Route path="/cart" element={<cart/>}/>
+  <Route path="/cart" element={<Cart/>}/>
    </Routes>
 
 </div>
