@@ -2,7 +2,7 @@ import React from 'react'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'
 import Home from "./Pages/Home"
-import Cart from "./Pages/Cart"
+import Cart from "./Pages/cart"
 import Navbaar from './Components/Navbaar';
 import { Route ,Routes   } from 'react-router-dom';
 const App = () => {
