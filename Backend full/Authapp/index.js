@@ -1,31 +1,36 @@
 const express = require("express");
 const app = express();
- 
-require('dotenv').config();
-
-const port = process.env.PORT || 5000; // ✅ 'PORT' should be in uppercase to match .env convention
-
-// ✅ Corrected the path to the connect function
-const { connect } = require("./config/data"); // Import connect function
+require("dotenv").config();
+const { connect } = require("./config/data");
 
 // Middleware to parse JSON
-app.use(express.json()); 
+app.use(express.json());
 
-// Correctly import and use routes
+// ✅ GET route to test in browser
+app.get("/", (req, res) => {
+    res.send("hello");
+});
+
+// ✅ POST route test (optional)
+app.post("/", (req, res) => {
+    res.status(200).json({ message: "✅ POST at / working", body: req.body });
+});
+
+// ✅ Import and use user routes
 const userRoutes = require("./routes/user");
-
 app.use("/api/v1", userRoutes);
 
-// Await database connection before starting server
+// ✅ Start server after DB connect
+const port = process.env.PORT || 5000;
+
 const startServer = async () => {
     try {
         await connect();
-        console.log("✅ Database connected successfully");
         app.listen(port, () => {
-            console.log(`Server is running on port ${port}`);
+            console.log(`🚀 Server running at http://localhost:${port}`);
         });
-    } catch (error) {
-        console.error("❌ Failed to connect to database, server not started", error);
+    } catch (err) {
+        console.error("❌ Server failed to start:", err);
         process.exit(1);
     }
 };

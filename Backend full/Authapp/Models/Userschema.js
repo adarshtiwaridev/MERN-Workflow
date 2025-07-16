@@ -17,17 +17,16 @@ const UserSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
-    confirmPassword: {
-        type: String,
-        required: true,
-        trim: true,
-    },
     role: {
         type: String,
         enum: ['user', 'admin', 'student'],
         default: 'user',
     },
+}, {
+    timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
 });
 
-// ✅ Export the model (collection name will be pluralized: users)
+
 module.exports = mongoose.model('User', UserSchema);
