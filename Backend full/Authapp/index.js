@@ -2,10 +2,10 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const { connect } = require("./config/data");
-
+ const cokiesParser=require("cookie-parser");
 // Middleware to parse JSON
 app.use(express.json());
-
+app.use(cokiesParser());
 // ✅ GET route to test in browser
 app.get("/", (req, res) => {
     res.send("hello");
