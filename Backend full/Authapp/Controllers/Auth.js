@@ -103,11 +103,11 @@ exports.login = async (req, res) => {
 
     // Remove password from user object
     user.password = undefined;
-    // User.token=token;
+    User.token=token;
     // Cookie options
     const options = {
       httpOnly: true,
-      expires: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours
+      expires: new Date(Date.now() +  24*60*60*1000), // 2 hours
       secure: process.env.NODE_ENV === "production", // set secure only in production
     };
 

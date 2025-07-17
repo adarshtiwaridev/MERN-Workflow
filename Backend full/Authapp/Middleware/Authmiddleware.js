@@ -1,26 +1,23 @@
 const jwt = require('jsonwebtoken');
 require("dotenv").config();
 
-// Auth middleware
+// ✅ Auth middleware
 exports.Auth = (req, res, next) => {
     try {
-        // extract JWT token (better from headers for security)
-        console.log("body" ,req.body.token);
-        console.log("cokies" ,req.cokies.token)
-        const token = req.body.token ||req.cokies.token || req.header("Authorization").replace("Bearer" ,"");
-        console.log(token)
+        // ✅ Extract token from body, cookie, or Authorization header
+        const token = req.body.token || req.cookies.token || req.header("Authorization")?.replace("Bearer ", "");
+
         if (!token) {
-            return res.status(400).json({
+            return res.status(401).json({
                 success: false,
                 message: "No token provided"
             });
         }
 
-        // verify token
+        // ✅ Verify token
         try {
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
-            console.log("Decoded token:", decoded);
-            req.User = decoded;
+            const payload = jwt.verify(token, process.env.JWT_SECRET);
+            req.user = payload; // Correct: use decoded payload here
         } catch (err) {
             return res.status(401).json({
                 success: false,
@@ -28,7 +25,7 @@ exports.Auth = (req, res, next) => {
             });
         }
 
-        next();
+        next(); // ✅ Continue to next middleware
     } catch (error) {
         return res.status(500).json({
             success: false,
@@ -37,13 +34,13 @@ exports.Auth = (req, res, next) => {
     }
 };
 
-// Check if user is a student
+// ✅ Student check middleware
 exports.Isstudent = (req, res, next) => {
     try {
-        if (req.body.role !== "student") {
-            return res.status(401).json({
+        if (req.user.role !== "student") {
+            return res.status(403).json({
                 success: false,
-                message: "You are not a student"
+                message: "Access denied: Not a student"
             });
         }
         next();
@@ -55,13 +52,13 @@ exports.Isstudent = (req, res, next) => {
     }
 };
 
-// Check if user is an admin
+// ✅ Admin check middleware
 exports.IsAdmin = (req, res, next) => {
     try {
-        if (req.body.role !== "Admin") {
-            return res.status(401).json({
+        if (req.user?.role !== "Admin") {
+            return res.status(403).json({
                 success: false,
-                message: "You are not an admin"
+                message: "Access denied: Not an admin"
             });
         }
         next();
