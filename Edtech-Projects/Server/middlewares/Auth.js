@@ -1,0 +1,6 @@
+//auth
+
+//isAdmin
+
+//isStudent
+//isTeacher
