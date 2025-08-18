@@ -1,6 +1,6 @@
 //auth
 
-//isAdmin
+
 
 //isStudent
 //isTeacher
